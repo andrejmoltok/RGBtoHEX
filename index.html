@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB to HEX Converter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main"></div>
+    <div class="inp">
+        <input type="text" onchange="parseRGB(this.value)">
+        <input type="button" value="Enter">
+    </div>
+    <div>
+        <p id="out"></p>
+    </div>
+    <script>
+        //************************************************************************************/
+        //
+        // @param x {string} teh RGB version of color, which will be converted into HEX variant
+        //
+        //************************************************************************************/
+        function parseRGB(x) {
+            let arr = x.split(',');
+            let first = Number(arr[0].split('(')[1]);
+            let sec = Number(arr[1]);
+            let third = Number(arr[2].split(')')[0]);
+            let toParse = [];
+            toParse.push(first,sec,third);
+            let hex = '#';
+            for (let i = 0; i < toParse.length; i += 1) {
+                if (toParse[i].toString(10) !== Number.isNaN(toParse[i])) {
+                    hex += (toParse[i]).toString(16);
+                }
+            }
+            out.innerHTML = hex;
+        }
+    </script>
+</body>
+</html>

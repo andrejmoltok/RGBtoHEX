@@ -1,0 +1,43 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    margin: auto auto;
+    padding: auto auto;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.inp {
+    margin: 0 235px 0 275px;
+    padding: 0 0;
+    width: 500px;
+    height: 50px;
+}
+
+input[type=text] {
+    margin: 15px 0 0 150px;
+    padding: 5px 5px;
+    width: 25%;
+    border: 2px solid black;
+}
+
+input[type=button] {
+    margin: 0 0 0 0;
+    padding: 5px 5px;
+    width: 20%;
+}
+
+#output {
+    margin: 0 0;
+    padding: auto auto;
+    width: 10%;
+    translate: 450% -1000%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
