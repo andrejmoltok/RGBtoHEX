@@ -10,7 +10,7 @@
 <body>
     <div>
         <div id="main">
-        <p id="out">RGB(x,y,z)</p>
+        <p id="out"></p>
         </div>
         <form class="form_set">
             <input id="delete" type="text" onchange="parseRGB(this.value)">
@@ -18,41 +18,6 @@
         </form>
         <input id="clear" type="button" value="Clear">
     </div>
-    <script>
-        const box = document.getElementById('main');
-        const outter = document.getElementById('out');
-        const clear = document.getElementById('clear');
-        const del = document.getElementById('delete');
-        const text = "RGB(x,y,z)";
-        //************************************************************************************/
-        //
-        // @param X {string} the RGB version of color, which will be converted into HEX
-        // @param RGB(167,39,54)
-        //
-        //************************************************************************************/
-        function parseRGB(x) {
-            let arr = x.split(',');
-            let first = Number(arr[0].split('(')[1]);
-            let sec = Number(arr[1]);
-            let third = Number(arr[2].split(')')[0]);
-            let toParse = [];
-            toParse.push(first,sec,third);
-            let hex = '#';
-            for (let i = 0; i < toParse.length; i += 1) {
-                if (toParse[i].toString(10) !== Number.isNaN(toParse[i])) {
-                    hex += (toParse[i]).toString(16);
-                }
-            }
-            outter.innerHTML = hex;
-            box.style.backgroundColor = hex;
-            box.style.borderColor = hex;
-        }
-        clear.addEventListener('click', function onClick(event) {
-            outter.innerHTML = text;
-            box.style.backgroundColor = "transparent";
-            box.style.borderColor = "black";
-            del.value = "";
-        });
-    </script>
+    <script src="index.js" async></script>
 </body>
 </html>
