@@ -1,2 +1,2 @@
 # RGBtoHEX
-RGB to HEX converter with HTML, CSS and Javascript
+RGB to HEX converter with HTML, CSS
