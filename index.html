@@ -45,10 +45,12 @@
             }
             outter.innerHTML = hex;
             box.style.backgroundColor = hex;
+            box.style.borderColor = hex;
         }
         clear.addEventListener('click', function onClick(event) {
             outter.innerHTML = text;
             box.style.backgroundColor = "transparent";
+            box.style.borderColor = "black";
             del.value = "";
         });
     </script>
