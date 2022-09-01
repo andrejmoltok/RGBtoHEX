@@ -10,12 +10,21 @@
         const clear = document.getElementById('clear');
         const del = document.getElementById('delete');
         const text = "RGB(x,y,z)";
+
+        clear.addEventListener('click', function onClick(event) {
+            outter.innerHTML = text;
+            box.style.backgroundColor = "transparent";
+            box.style.borderColor = "black";
+            del.value = "";
+        });
+
         //************************************************************************************/
         //
         // @param X {string} the RGB version of color, which will be converted into HEX
         // @param RGB(167,39,54)
         //
         //************************************************************************************/
+        
         function parseRGB(x) {
             let arr = x.split(',');
             let first = Number(arr[0].split('(')[1]);
@@ -34,11 +43,4 @@
             outter.innerHTML = hex;
             box.style.backgroundColor = hex;
             box.style.borderColor = hex;
-        }
-        
-        clear.addEventListener('click', function onClick(event) {
-            outter.innerHTML = text;
-            box.style.backgroundColor = "transparent";
-            box.style.borderColor = "black";
-            del.value = "";
-        });
+        };
