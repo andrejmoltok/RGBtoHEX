@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="main"></div>
-    <div class="inp">
-        <input type="text" onchange="parseRGB(this.value)">
-        <input type="button" value="Enter">
-    </div>
     <div>
-        <p id="out"></p>
+        <div id="main">
+        <p id="out">RGB(x,y,z)</p>
+        </div>
+        <form class="form_set">
+            <input id="delete" type="text" onchange="parseRGB(this.value)">
+            <input type="button" value="Enter">
+        </form>
+        <input id="clear" type="button" value="Clear">
     </div>
     <script>
+        const box = document.getElementById('main');
+        const outter = document.getElementById('out');
+        const clear = document.getElementById('clear');
+        const del = document.getElementById('delete');
+        const text = "RGB(x,y,z)";
         //************************************************************************************/
         //
-        // @param x {string} teh RGB version of color, which will be converted into HEX variant
+        // @param X {string} the RGB version of color, which will be converted into HEX
+        // @param RGB(167,39,54)
         //
         //************************************************************************************/
         function parseRGB(x) {
@@ -35,8 +43,14 @@
                     hex += (toParse[i]).toString(16);
                 }
             }
-            out.innerHTML = hex;
+            outter.innerHTML = hex;
+            box.style.backgroundColor = hex;
         }
+        clear.addEventListener('click', function onClick(event) {
+            outter.innerHTML = text;
+            box.style.backgroundColor = "transparent";
+            del.value = "";
+        });
     </script>
 </body>
 </html>

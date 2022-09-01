@@ -3,41 +3,54 @@ body {
     height: 100%;
 }
 
-.main {
+#main {
     margin: auto auto;
     padding: auto auto;
     width: 500px;
     height: 500px;
     border: 2px solid black;
-    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
 }
 
-.inp {
-    margin: 0 235px 0 275px;
-    padding: 0 0;
+.form_set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    padding: 0 250px 0 250px;
     width: 500px;
-    height: 50px;
+    height: 60px;
+    
 }
 
 input[type=text] {
-    margin: 15px 0 0 150px;
-    padding: 5px 5px;
+    margin: 15px 15px 15px 15px;
+    padding: 5px 10px 5px 10px;
     width: 25%;
     border: 2px solid black;
+    border-radius: 6%;
 }
 
 input[type=button] {
-    margin: 0 0 0 0;
-    padding: 5px 5px;
-    width: 20%;
+    margin: 15px 15px 15px 15px;
+    padding: 5px 10px 5px 10px;
+    width: 15%;
 }
 
-#output {
-    margin: 0 0;
+#out {
+    margin: 40% 0 0 25%;
     padding: auto auto;
-    width: 10%;
-    translate: 450% -1000%;
+    width: 50%;
     background-color: transparent;
-    color: white;
+    color: black;
     text-align: center;
+    font-size: 48px;
+}
+
+#clear {
+    margin: auto auto;
+    padding: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
