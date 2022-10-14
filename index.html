@@ -10,12 +10,11 @@
 <body>
     <div>
         <p id="out"></p>
-        <div id="main"></div>
         <form class="form_set">
-            <input id="delete" type="text" onchange="parseRGB(this.value)">
-            <input type="button" value="Enter">
+            <input id="delete" type="text" onkeyup="parseRGB(this.value)">
+            <!--<input type="button" value="Enter">-->
         </form>
-        <input id="clear" type="button" value="Clear">
+        <!--<input id="clear" type="button" value="Clear">-->
     </div>
     <script src="index.js" async></script>
 </body>

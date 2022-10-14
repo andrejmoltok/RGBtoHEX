@@ -3,9 +3,9 @@
 /* eslint-disable no-unused-vars */
 
 // elements created by getting the ID
-const box = document.getElementById('main');
+
 const outter = document.getElementById('out');
-const clear = document.getElementById('clear');
+//const clear = document.getElementById('clear');
 const del = document.getElementById('delete');
 
 // single text element
@@ -15,20 +15,16 @@ const text = 'RGB(x,y,z)';
 // into starting position
 window.onload = function() {
   outter.innerHTML = text;
-  box.style.backgroundColor = 'transparent';
-  box.style.border = '2px solid black';
   del.value = '';
 };
 
 // function for the Clear button
-clear.addEventListener('click', function(event) {
-  outter.innerHTML = text;
-  box.style.backgroundColor = 'transparent';
-  box.style.borderColor = 'black';
-  del.value = '';
-  del.style.backgroundColor = 'white';
-  del.style.borderColor = 'black';
-});
+// clear.addEventListener('click', function onClick(event) {
+//   outter.innerHTML = text;
+//   del.value = '';
+//   del.style.backgroundColor = 'white';
+//   del.style.borderColor = 'black';
+// });
 
 // the main function which parses the input string into
 // HEX color code
@@ -49,7 +45,6 @@ function parseRGB(x) {
   }
   console.log(hex);
   outter.innerHTML = hex;
-  box.style.backgroundColor = hex;
-  box.style.borderColor = hex;
-  return hex;
+  del.style.backgroundColor = hex;
+  del.style.borderColor = hex;
 };

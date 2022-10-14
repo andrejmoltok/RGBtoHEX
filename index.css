@@ -3,15 +3,6 @@ body {
     height: 100%;
 }
 
-/*main box where the EHX color will visually appear*/
-#main {
-    margin: auto auto;
-    padding: auto auto;
-    width: 500px;
-    height: 500px;
-    border-radius: 2%;
-}
-
 /*form-set where the user gives the input in RGB format*/
 .form_set {
     display: flex;
@@ -53,10 +44,10 @@ input[type=button] {
 
 
 /*styling for the Clear function button*/
-#clear {
+/* #clear {
     margin: auto auto;
     padding: auto auto;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
