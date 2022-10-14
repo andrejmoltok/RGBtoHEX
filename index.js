@@ -21,11 +21,13 @@ window.onload = function() {
 };
 
 // function for the Clear button
-clear.addEventListener('click', function onClick(event) {
+clear.addEventListener('click', function(event) {
   outter.innerHTML = text;
   box.style.backgroundColor = 'transparent';
   box.style.borderColor = 'black';
   del.value = '';
+  del.style.backgroundColor = 'white';
+  del.style.borderColor = 'black';
 });
 
 // the main function which parses the input string into
@@ -36,8 +38,8 @@ function parseRGB(x) {
   const sec = Number(arr[1]);
   const third = Number(arr[2].split(')')[0]);
   const toParse = [];
-  toParse.push(first, sec, third);
   let hex = '#';
+  toParse.push(first, sec, third);
   for (let i = 0; i < toParse.length; i += 1) {
     if (toParse[i].toString(16).length === 1) {
       hex += '0' + (toParse[i]).toString(16);
@@ -45,7 +47,9 @@ function parseRGB(x) {
       hex += (toParse[i]).toString(16);
     }
   }
+  console.log(hex);
   outter.innerHTML = hex;
   box.style.backgroundColor = hex;
   box.style.borderColor = hex;
+  return hex;
 };
