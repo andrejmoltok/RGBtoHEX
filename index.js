@@ -20,9 +20,9 @@ window.onload = function() {
 // HEX color code
 function parseRGB(x) {
   const arr = x.split(',');
-  const first = Number(arr[0].split('(')[1]);
+  const first = Number(arr[0]);
   const sec = Number(arr[1]);
-  const third = Number(arr[2].split(')')[0]);
+  const third = Number(arr[2]);
   const toParse = [];
   let hex = '#';
   toParse.push(first, sec, third);
