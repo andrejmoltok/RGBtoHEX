@@ -3,9 +3,7 @@
 /* eslint-disable no-unused-vars */
 
 // elements created by getting the ID
-
 const outter = document.getElementById('out');
-//const clear = document.getElementById('clear');
 const del = document.getElementById('delete');
 
 // single text element
@@ -17,14 +15,6 @@ window.onload = function() {
   outter.innerHTML = text;
   del.value = '';
 };
-
-// function for the Clear button
-// clear.addEventListener('click', function onClick(event) {
-//   outter.innerHTML = text;
-//   del.value = '';
-//   del.style.backgroundColor = 'white';
-//   del.style.borderColor = 'black';
-// });
 
 // the main function which parses the input string into
 // HEX color code
